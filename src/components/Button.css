@@ -1,0 +1,111 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.25px;
+    line-height: 1;
+    padding: 16px 24px;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        opacity 0.2s ease;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn--primary {
+    background: var(--color-brand);
+    color: #ffffff;
+}
+.btn--primary:hover:not(:disabled) {
+    background: var(--color-brand-light);
+}
+
+.btn--secondary {
+    background: var(--color-surface-alt);
+    color: var(--color-text-3);
+}
+.btn--secondary:hover:not(:disabled) {
+    background: var(--color-border);
+    color: var(--color-text-3);
+}
+[data-theme="dark"] .btn--secondary {
+    background: var(--color-surface-alt);
+    color: var(--color-text-2);
+}
+[data-theme="dark"] .btn--secondary:hover:not(:disabled) {
+    background: #ffffff;
+    color: var(--color-text-3);
+}
+
+.btn--danger {
+    background: var(--color-danger);
+    color: #ffffff;
+}
+.btn--danger:hover:not(:disabled) {
+    background: var(--color-danger-hover);
+}
+
+.btn--ghost {
+    background: transparent;
+    color: var(--color-text-2);
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+.btn--ghost:hover:not(:disabled) {
+    color: var(--color-text-1);
+}
+
+.btn--edit {
+    background: var(--color-surface-alt);
+    color: var(--color-text-3);
+    border-radius: 24px;
+}
+.btn--edit:hover:not(:disabled) {
+    background: var(--color-border);
+}
+[data-theme="dark"] .btn--edit {
+    background: var(--color-surface-alt);
+    color: var(--color-text-2);
+}
+[data-theme="dark"] .btn--edit:hover:not(:disabled) {
+    background: #252945;
+}
+
+.btn--new-invoice {
+    background: var(--color-brand);
+    color: #ffffff;
+    border-radius: 24px;
+    padding: 8px 15px 8px 8px;
+    gap: 16px;
+}
+.btn--new-invoice:hover:not(:disabled) {
+    background: var(--color-brand-light);
+}
+
+.btn__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #ffffff;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.btn__circle svg {
+    color: var(--color-brand);
+    fill: var(--color-brand);
+}
