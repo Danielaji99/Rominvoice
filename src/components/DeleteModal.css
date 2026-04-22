@@ -1,0 +1,72 @@
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    animation: backdropFade 0.2s ease;
+    padding: 24px;
+}
+
+@keyframes backdropFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal {
+    background: var(--color-surface);
+    border-radius: 8px;
+    padding: 48px;
+    max-width: 480px;
+    width: 100%;
+    animation: modalSlideIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text-1);
+    letter-spacing: -0.5px;
+    margin-bottom: 13px;
+}
+
+.modal__body {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-2);
+    line-height: 1.54;
+    letter-spacing: -0.1px;
+    margin-bottom: 32px;
+}
+
+.modal__actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+@media (max-width: 480px) {
+    .modal {
+        padding: 32px 24px;
+    }
+    .modal__title {
+        font-size: 20px;
+    }
+}
